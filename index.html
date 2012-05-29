@@ -1,0 +1,192 @@
+<html>
+<head>
+    <title>Flags.js - Pure JavaScript </title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" href="assets/tinyrange/jquery.range.css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Chewy' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <div class="container">
+        <h1><span>Flag.js - Pure JavaScript flags, no more sprites.</span></h1>
+        <div class="logo">
+            <img src="assets/flagsjs-logo.png" />
+        </div>
+
+        <div class="info">
+            <h2><s>CSS+Sprites</s> < Canvas</h2>
+            <p>
+                Occupy bicycle rights trust fund mollit 8-bit, fugiat sint cupidatat DIY. Minim wolf odd future nisi, cardigan tumblr small batch officia dolore pickled. Assumenda laborum swag, tempor pop-up dolore you probably haven't heard of them gentrify art party etsy street art semiotics thundercats fugiat put a bird on it.
+            </p>
+            <a href="#" class="download">
+                Download
+                <small>1kb minified & gzip</small>
+            </a>
+        </div>
+
+        <div class="code">
+<pre><code>
+&lt;a href="#" class="flag" data-country="se">Sweden&lt;/a>
+&lt;a href="#" class="flag" data-country="fi">Finland&lt;/a>
+&lt;a href="#" class="flag" data-country="dk">Denmark&lt;/a>
+
+&lt;script src="flags.min.js">
+&lt;script>
+    new Flags();
+&lt;/script>
+</code></pre>
+        </div>
+
+        <div class="example">
+            <div class="preview">
+                <a href="#" class="flag" data-country="se">Sweden</a>
+                <a href="#" class="flag" data-country="fi">Finland</a>
+                <a href="#" class="flag" data-country="dk">Denmark</a>
+                <a href="#" class="flag" data-country="no">Norway</a>
+                <a href="#" class="flag" data-country="is">Iceland</a>
+                <a href="#" class="flag" data-country="be">Belgium</a>
+                <a href="#" class="flag" data-country="td">Chad</a>
+                <a href="#" class="flag" data-country="ci">Ivory Coast</a>
+                <a href="#" class="flag" data-country="fr">France</a>
+                <a href="#" class="flag" data-country="gn">Guinea</a>
+                <a href="#" class="flag" data-country="gt">Guatemala</a>
+                <a href="#" class="flag" data-country="ie">Ireland</a>
+                <a href="#" class="flag" data-country="it">Italy</a>
+                <a href="#" class="flag" data-country="cm">Cameroon</a>
+                <a href="#" class="flag" data-country="ml">Mali</a>
+                <a href="#" class="flag" data-country="ng">Nigeria</a>
+                <a href="#" class="flag" data-country="ro">Romania</a>
+                <a href="#" class="flag" data-country="am">Armenia</a>
+                
+                <a href="#" class="flag" data-country="se">Sweden</a>
+                <a href="#" class="flag" data-country="fi">Finland</a>
+                <a href="#" class="flag" data-country="dk">Denmark</a>
+                <a href="#" class="flag" data-country="no">Norway</a>
+                <a href="#" class="flag" data-country="is">Iceland</a>
+                <a href="#" class="flag" data-country="be">Belgium</a>
+                <a href="#" class="flag" data-country="td">Chad</a>
+                <a href="#" class="flag" data-country="ci">Ivory Coast</a>
+                <a href="#" class="flag" data-country="fr">France</a>
+                <a href="#" class="flag" data-country="gn">Guinea</a>
+                <a href="#" class="flag" data-country="gt">Guatemala</a>
+                <a href="#" class="flag" data-country="ie">Ireland</a>
+                <a href="#" class="flag" data-country="it">Italy</a>
+                <a href="#" class="flag" data-country="cm">Cameroon</a>
+                <a href="#" class="flag" data-country="ml">Mali</a>
+                <a href="#" class="flag" data-country="ng">Nigeria</a>
+                <a href="#" class="flag" data-country="ro">Romania</a>
+                <a href="#" class="flag" data-country="am">Armenia</a>
+            </div>
+            <div class="settings">
+                <div class="value-container">
+                    Width
+                    <div class="value">
+                        <input type="text" min="0" max="100" id="width" value="65" />
+                    </div>
+                </div>
+                <div class="value-container">
+                    Height
+                    <div class="value">
+                        <input type="text" min="0" max="100" id="height" value="45" />
+                    </div>
+                </div>
+                <div class="value-container">
+                    Gradient
+                    <div class="value">
+                        <input type="text" min="0" max="50" id="gradient" value="22" />
+                    </div>
+                </div>
+                <div class="value-container">
+                    Border
+                    <div class="value">
+                        <input type="text" min="0" max="10" id="border" value="1" />
+                    </div>
+                </div>
+                <div class="value-container">
+                    Border opacity
+                    <div class="value">
+                        <input type="text" min="0" max="100" id="border-opacity" value="80"  />
+                    </div>
+                </div>
+                <div class="value-container">
+                    Light
+                    <div class="value">
+                        <input type="text" min="0" max="10" id="light" value="1" />
+                    </div>
+                </div>
+                <div class="value-container">
+                    Light opacity
+                    <div class="value">
+                        <input type="text" min="0" max="100" id="light-opacity" value="50" />
+                    </div>
+                </div>
+
+                <div class="code">
+<pre><code>
+var options = {
+    width: <span id="value-width" class="number">70</span>,
+    height: <span id="value-height" class="number">50</span>,
+    gradient: {
+        opacity: <span id="value-gradient" class="number">0.22</span>
+    },
+    light: {
+        opacity:<span id="value-light-opacity" class="number">0.5</span>,
+        width: <span id="value-light" class="number">1</span>
+    },
+    border: {
+        opacity:<span id="value-border-opacity" class="number">0.8</span>,
+        width: <span id="value-border" class="number">1</span>
+    }
+};
+new Flags(options);
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="author">
+            <img src="assets/jonny-small.jpg" class="me">
+            <div class="text">
+                <p>
+                    I'm <a href="http://jonnystromberg.com">Jonny</a>. A Designer, Entrepreneur &amp; JavaScript Hacker from Stockholm.
+                    Currently designer at <a href="http://mynewsdesk.com">Mynewsdesk</a>.
+                    Behind <a href="http://listjs.com">List.js</a>, 
+                    <a href="http://teamtailor.com">Teamtailor</a>,
+                    <a href="http://startuplocation.com/hack">Stockholm Startup Hack</a>,
+                    <a href="http://silarapp.com">SilarApp</a> and
+                    <a href="http://startuplocation.com">StartupLocation</a>.
+                </p>
+                <p>
+                    <a href="https://twitter.com/javve" class="twitter-follow-button" data-show-count="false">Follow @javve</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="flags.js"></script>
+    <script>
+        var options = {
+            class: "flag",
+            width: 70,
+            height: 50,
+            border: {
+                opacity:0.8,
+                width: 1
+            },
+            light: {
+                opacity:0.5,
+                width: 1
+            },
+            gradient: {
+                opacity: 0.22
+            }
+        };
+        new Flags(options);
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script src="assets/jquery-1.7.2.min.js"></script>
+    <script src="assets/hijs.js"></script>
+    <script src="assets/tinyrange/jquery.range.js"></script>
+    <script src="assets/example.js"></script>
+</body>
+</html>

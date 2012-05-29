@@ -1,0 +1,128 @@
+body {
+	background:url('fancy_deboss.png') repeat;
+	font-family: 'PT Sans', sans-serif;
+ 	-webkit-font-smoothing: antialiased;
+ 	color:#646363;
+ 	font-size:13px;
+ 	text-shadow:0 1px 0 #fff;
+}
+a {
+	color:#145aa4;
+}
+h1 {
+	position: absolute;
+	top:-1000px;
+}
+h2 {
+	font-family: 'Chewy', cursive;
+	color:#145aa4;
+	font-size:32px;
+	font-weight:normal;
+	text-align:center;
+	margin:0 0 20px;
+}
+h2 s {
+	color:#aaa;
+}
+.container {
+	width:800px;
+	margin:0 auto;
+}
+.logo {
+	text-align:center;
+}
+
+.flag {
+	display:inline-block;
+	margin:10px;
+}
+
+.info {
+	width:300px;
+	float:left;
+}
+.code {
+	width:470px;
+	float:right;
+	background:rgba(255,255,255,0.8);
+	border:solid 1px #e5e5e5;
+	border-radius:10px;
+}
+.code .number {
+	cursor:hand;
+}
+.code .number input {
+	width:20px;
+	border:solid 1px #999;
+}
+
+.example {
+	clear:both;
+	padding-top:60px;
+}
+.settings {
+	float:right;
+	padding-top:12px;
+}
+.settings .code {
+	clear:left;
+	float:left;
+	width:300px;
+	margin-top:20px;
+}
+.settings .value-container {
+	width:300px;
+	float:left;
+	text-align:left;
+	clear:left;
+	margin-bottom:5px;
+}
+.settings .value {
+	width:200px;
+	float:right;
+	display:inline-block;
+}
+.preview {
+	float:left;
+	width:480px;
+}
+.author {
+	clear:both;
+	padding-top:50px;
+	margin-bottom:70px;
+	float:left;
+}
+.author .me {
+	border-radius:50%;
+	float:left;
+	margin: 0 20px 0 100px;
+}
+.author .text {
+	float:left;
+	width:400px;
+}
+.author .text p {
+	margin: 0 0 10px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+* Syntax coloring
+* * * * * * * * * * * * * * * * * * * * */
+
+pre {
+    margin:0 20px 20px;
+    line-height:1.5;
+}
+
+pre, code {
+   font-family: 'monaco', sans-serif;
+   font-size: 12px;
+}
+
+pre .keyword { color: #FF0C4B; }
+pre .string { color: #01DBFF; }
+pre .regexp { color: #15E80B; }
+pre .class { color: #15E80B; font-weight: bold; }
+pre .special { color: #FFD901; }
+pre .number { color: #01DBFF; }
+pre .comment { color: grey; font-style: italic; }
