@@ -20,7 +20,7 @@ function reloadFlags() {
 	        width: $('#value-border').text()
 	    }
 	};
-	new Flags(options);
+	new Flag(options);
 }
 
 $('#width').range({
