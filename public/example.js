@@ -11,13 +11,13 @@ function reloadFlags() {
 	    gradient: {
 	        opacity: $('#value-gradient').text()
 	    },
-	    border: {
-	        opacity:$('#value-border-opacity').text(),
-	        width: $('#value-border').text()
-	    },
 	    light: {
 	        opacity:$('#value-light-opacity').text(),
 	        width: $('#value-light').text()
+	    },
+	    border: {
+	        opacity:$('#value-border-opacity').text(),
+	        width: $('#value-border').text()
 	    }
 	};
 	new Flags(options);

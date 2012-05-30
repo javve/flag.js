@@ -6,6 +6,22 @@ body {
  	font-size:13px;
  	text-shadow:0 1px 0 #fff;
 }
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    *zoom:1;
+}
+
 a {
 	color:#145aa4;
 }
@@ -32,14 +48,19 @@ h2 s {
 	text-align:center;
 }
 
+
 .flag {
 	display:inline-block;
 	margin:10px;
 }
 
 .info {
+	margin-bottom:30px;
+}
+.info .text {
 	width:300px;
 	float:left;
+	margin-bottom:30px;
 }
 .code {
 	width:470px;
@@ -56,9 +77,18 @@ h2 s {
 	border:solid 1px #999;
 }
 
+
+.share {
+	border-top:solid 1px #ddd;
+	border-bottom:solid 1px #ddd;
+	padding-top:15px;
+	clear:both;
+	padding-bottom:10px;
+}
+
 .example {
 	clear:both;
-	padding-top:60px;
+	padding-top:30px;
 }
 .settings {
 	float:right;

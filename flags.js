@@ -24,19 +24,21 @@ window.Flags = function(options) {
             c.fillStyle = bottom;
             c.fillRect(0, 0, w, h);
             c.fillStyle = cross;
-            c.fillRect(r((w/2) - (w/6) - (w/6)*0.5), 0, r((w/4)), h);
-            c.fillRect(0, r((h/2) - (h/6)), w, r(h/4));
+            var cw = r((h/16));
+            c.fillRect(cw*7, 0, cw*4, h);
+            c.fillRect(0, cw*6, w, cw*4);
         },
         cross2: function(c, w, h, bottom, cross, cross2) {
             c.fillStyle = bottom;
             c.fillRect(0, 0, w, h);
             c.fillStyle = cross;
-            c.fillRect(r((w/2) - (w/6) - (w/6)*0.5), 0, r((w/4)), h);
-            c.fillRect(0, r((h/2) - (h/6)), w, r(w/4));
+            var cw = r((h/16));
+            c.fillRect(cw*7, 0, cw*4, h);
+            c.fillRect(0, cw*6, w, cw*4);
 
             c.fillStyle = cross2;
-            c.fillRect(r((w/2) - (w/6) - r(w/20)), 0, r((w/6)), h);
-            c.fillRect(0, r((h/2) - (h/6)) + r(h/14), w, r(h/6));
+            c.fillRect(cw*8, 0, cw*2, h);
+            c.fillRect(0, cw*7, w, cw*2);
         },
         v3stripes: function(c, w, h, one, two, three) {
             c.fillStyle = one;
