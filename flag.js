@@ -74,6 +74,11 @@ window.flags = function(options) {
                 c.fillStyle = three;
                 c.fillRect(0, h-r(h/3), w, r(h/3));
             },
+            centerCircles: function(c, w, h, one) {
+                c.fillStyle = one;
+                c.arc(w/2, h/2, h/4, 0, 2 * Math.PI, false);
+                c.fill();
+            },
             /**
              * The diagonal cross in the british flag is weird, the white part is goes from corner to corner,
              * but the red on each "arm" is slightly skewed counter clock-wise.
@@ -182,6 +187,12 @@ window.flags = function(options) {
             uk: function (c, w, h) {
                 p.britishDiagonalCross(c, w, h, "darkblue", 'white', "#a00");
                 p.centeredCross(c, w, h, 'transparent', '#fff', '#a00');
+            },
+            ru: function(c, w, h) {
+                p.h3stripes(c, w, h, '#ffffff', '#0000ff', '#ff0000');
+            },
+            jp: function(c, w, h) {
+                p.centerCircles(c, w, h, '#ff0000');
             }
         },
         effects = {
